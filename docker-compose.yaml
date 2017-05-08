@@ -1,0 +1,9 @@
+db:
+    image: mongo:3.0.2
+web:
+    build: .
+    command: python app.py
+    volumes: 
+        - .:/app
+    links:
+        - db

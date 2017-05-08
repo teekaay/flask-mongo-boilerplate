@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <title>App - {% block title %}{% endblock %}</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+        {% block styles %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+        <script src="{{ url_for('static', filename='vendor-js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>
